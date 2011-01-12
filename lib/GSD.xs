@@ -2,7 +2,6 @@
 
   perl-GSD glue - 95% complete
                                         timj@jach.hawaii.edu
- 					Time-stamp: <13 Jan 96 1322 timj>
 
   Missing calls:   gsdGet0w()
                    gsdGet1w()
@@ -26,10 +25,7 @@ extern "C" {
 
 /* Deal with the packing of perl arrays to C pointers */
 
-#include "arrays/arrays.h"
-
-/* comment this out if you are linking with libarrays.a separately */
-#include "arrays/arrays.c"
+#include "arrays.h"
 
 /* These are the GSD library functions */
 #include "gsd.h"

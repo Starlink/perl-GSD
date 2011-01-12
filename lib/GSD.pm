@@ -74,13 +74,10 @@ require 5.005;
 use strict;
 use Carp;
 
-use Exporter;
-use DynaLoader;
+use Exporter qw/ import /;
+use base qw/ DynaLoader /;
 
-use vars qw/$VERSION @ISA @EXPORT/;
-
-
-@ISA = qw(Exporter DynaLoader);
+use vars qw/$VERSION @EXPORT/;
 
 @EXPORT = qw( gsdOpenRead gsdClose gsdFind gsdItem gsdInqSize
               gsdGet0d gsdGet0r gsdGet0i gsdGet0l gsdGet0c gsdGet0b
@@ -89,7 +86,7 @@ use vars qw/$VERSION @ISA @EXPORT/;
 	      gsdGet1dp gsdGet1rp gsdGet1ip
 	    );
 
-$VERSION = '1.13';
+$VERSION = '1.14';
 
 bootstrap GSD  $VERSION;
 
@@ -728,12 +725,9 @@ This library is read-only.
 
 This module was written by Tim Jenness, E<lt>t.jenness@jach.hawaii.eduE<gt>
 
-Copyright (C) 1995-2000,2003 Tim Jenness and the UK Particle Physics and
+Copyright (C) 2007-2011 Science and Technology Facilities Council.
+Copyright (C) 1995-2000,2003,2004 Tim Jenness and the UK Particle Physics and
 Astronomy Research Council. All Rights Reserved.
-
-=head1 CVS REVISION
-
- $Id$
 
 =head1 ACKNOWLEDGMENTS
 
