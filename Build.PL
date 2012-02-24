@@ -40,9 +40,6 @@ my $build = Module::Build->new
                          gsdprint
                        /],
 
-   recommends => {
-                  "PDL" => 0,
-                 },
    build_requires => {
                       "Test::More" => 0,
                      },
