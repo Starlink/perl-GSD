@@ -4,6 +4,6 @@ blib
 pm_to_blib
 *.o
 lib/GSD.c
-MYMETA.yml
+MYMETA.*
 META.yml
 *.tar.gz
