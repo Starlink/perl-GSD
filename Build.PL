@@ -45,7 +45,8 @@ my $build = Module::Build->new
                      },
    c_source => [ "arrays" ],
    extra_compiler_flags => [ "-I$StarConfig{Star_Inc}" ],
-   extra_linker_flags =>  "-L$StarConfig{Star_Lib} $gsdlibs",
+   extra_linker_flags =>  "-L$StarConfig{Star_Lib} ".
+                          "-Wl,-rpath,$StarConfig{Star_Lib} $gsdlibs",
   );
 
 $build->create_build_script;
